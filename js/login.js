@@ -8,6 +8,16 @@ const elform =document.querySelector(".js-form")
 // http://192.168.5.242:5000/user/login
 // email: input.value
 // password: input.value
+const LocalData = localStorage.getItem("token")
+// console.log(LocalData);
+if (!LocalData) {
+    location.replace("registir.html")
+}
+// elLogOutBtn.addEventListener("click", function (evt) {
+//     evt.preventDefault()
+//     localStorage.removeItem("token")
+//     location.reload()
+// })
 
 elform.addEventListener("submit", (evt) => {
     evt.preventDefault();
